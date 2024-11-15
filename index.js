@@ -246,12 +246,15 @@ function scrollToGamesSection() {
 }
 
 const scrollToOurGamesBtn = document.getElementById("header-our_games_nav");
+
+// making the games section scroll into view when navigation button is clicked
 scrollToOurGamesBtn.addEventListener("click", scrollToGamesSection);
 
 /************************************************************************************
  * Big Customization 2: Filter buttons sticking in place when the user scrolls down
  */
 
+// function to check if the top of the element is above the top of the viewport
 function hasReachedTopOfPage(element) {
   const border = element.getBoundingClientRect();
 
@@ -261,6 +264,7 @@ function hasReachedTopOfPage(element) {
 
 const buttonContainer = document.getElementById("button-container");
 
+// constantly checking if the user has scrolled past the button container
 window.addEventListener("scroll", () => {
   if (hasReachedTopOfPage(buttonContainer)) {
     if (!buttonContainer.classList.contains("shadow"))
@@ -274,4 +278,49 @@ window.addEventListener("scroll", () => {
 /************************************************************************************
  * Big Customization 3: Search bar for games
  */
+
+const searchInput = document.getElementById("header-search_input");
+const searchBtn = document.getElementById("header-search_button");
+
+function searchGameName() {
+  const searchInputText = searchInput.value
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+  console.log(searchInputText);
+
+  const searchInputTextArray = searchInputText.split(" ");
+  const matchingGames = GAMES_JSON.filter((game) => {
+    let check = false;
+    searchInputTextArray.forEach((word) => {
+      if (game.name.trim().toLowerCase().includes(word)) {
+        check = true;
+        return;
+      }
+    });
+    return check;
+  });
+
+  deleteChildElements(gamesContainer);
+  addGamesToPage(matchingGames);
+
+  if (matchingGames.length === 0) {
+    const message = document.createElement("div");
+    message.innerHTML = `<p>We can't find games that match "${searchInput.value}". Would you like to try again?</p>`;
+    gamesContainer.append(message);
+  }
+
+  gamesContainer.scrollIntoView({ behavior: "smooth" });
+}
+
+// Making Search button execute the Search function
+searchBtn.addEventListener("click", () => {
+  searchGameName();
+});
+
+// Making "Enter" also execute the Search function
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") searchGameName();
+});
 
