@@ -20,25 +20,6 @@ body {
   padding: 1%;
 }
 
-@media (max-width: 550px) {
-  .header,
-  .stats-container {
-    flex-direction: column;
-  }
-
-  .header {
-    justify-content: center;
-  }
-
-  #header-our_games_nav {
-    margin-bottom: 30px;
-  }
-
-  #button-container {
-    padding: 10px 0;
-  }
-}
-
 .header-logo,
 #header-our_games_nav {
   display: flex;
@@ -180,4 +161,32 @@ button:hover {
 .shadow {
   box-shadow: 0 7px 7px 0px rgba(0, 0, 0, 0.4);
   z-index: 1000;
+}
+
+@media (max-width: 550px) {
+  .header,
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  #header-our_games_nav {
+    margin-bottom: 30px;
+  }
+
+  #button-container {
+    padding: 10px 0;
+  }
+
+  .game-card:hover {
+    box-shadow: none;
+    z-index: 0;
+  }
+
+  .shadow {
+    z-index: 0;
+  }
 }
