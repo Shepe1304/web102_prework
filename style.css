@@ -33,6 +33,10 @@ body {
   #header-our_games_nav {
     margin-bottom: 30px;
   }
+
+  #button-container {
+    padding: 10px 0;
+  }
 }
 
 .header-logo,
