@@ -44,7 +44,8 @@ function addGamesToPage(games) {
     // between the end of the src attribute and the end of the tag ("/>")
     gameCard.innerHTML = `<h3>${game.name}</h3>
                           <p>${game.description}</p>
-                          <img src="${game.img}" class="game-img"/>`;
+                          <img src="${game.img}" class="game-img"/>
+                          <p>Funded: ${game.pledged}/${game.goal}</p>`;
 
     // append the game to the games-container
     gamesContainer.append(gameCard);
@@ -80,7 +81,7 @@ const amountRaised = GAMES_JSON.reduce((acc, game) => {
 }, 0);
 
 // set inner HTML using template literal
-raisedCard.innerHTML = `${amountRaised.toLocaleString("en-US")}$`;
+raisedCard.innerHTML = `$${amountRaised.toLocaleString("en-US")}`;
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
@@ -324,3 +325,6 @@ searchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") searchGameName();
 });
 
+/************************************************************************************
+ * Big Customization 4: Funding Display, Donation Form, and Display after Donation
+ */
