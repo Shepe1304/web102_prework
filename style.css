@@ -180,13 +180,4 @@ button:hover {
   #button-container {
     padding: 10px 0;
   }
-
-  .game-card:hover {
-    box-shadow: none;
-    z-index: 0;
-  }
-
-  .shadow {
-    z-index: 0;
-  }
 }
