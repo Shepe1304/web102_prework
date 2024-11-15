@@ -307,7 +307,7 @@ function searchGameName() {
 
   if (matchingGames.length === 0) {
     const message = document.createElement("div");
-    message.innerHTML = `<p>We can't find games that match "${searchInput.value}". Would you like to try again?</p>`;
+    message.innerHTML = `<p>We can't find games that match "${searchInput.value}" in their names. Would you like to try again?</p>`;
     gamesContainer.append(message);
   }
 
