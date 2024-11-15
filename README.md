@@ -22,6 +22,7 @@ The following **optional** features are implemented:
 - [X] Filter buttons now stay on the page even when the user has scrolled down past its original position. This helps the user avoid having to scroll back all the way to find the filter buttons.
 - [X] A styling change is included to indicate which filter is in effect.
 - [X] For aesthetics, buttons take 0.15s to transition when hovered on, and some minor CSS changes are made.
+- [X] Making the website Responsive.
 
 ## Video Walkthrough
 

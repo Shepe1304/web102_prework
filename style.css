@@ -20,6 +20,21 @@ body {
   padding: 1%;
 }
 
+@media (max-width: 550px) {
+  .header,
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  #header-our_games_nav {
+    margin-bottom: 30px;
+  }
+}
+
 .header-logo,
 #header-our_games_nav {
   display: flex;
