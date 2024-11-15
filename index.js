@@ -31,7 +31,7 @@ const gamesContainer = document.getElementById("games-container");
 // create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
   // loop over each item in the data
-  games.forEach((game) => {
+  games.forEach((game, id) => {
     // create a new div element, which will become the game card
     const gameCard = document.createElement("div");
 
@@ -312,6 +312,13 @@ function searchGameName() {
     gamesContainer.append(message);
   }
 
+  if (unfundedBtn.classList.contains("button-selected"))
+    unfundedBtn.classList.remove("button-selected");
+  if (fundedBtn.classList.contains("button-selected"))
+    fundedBtn.classList.remove("button-selected");
+  if (allBtn.classList.contains("button-selected"))
+    allBtn.classList.remove("button-selected");
+
   gamesContainer.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -324,7 +331,3 @@ searchBtn.addEventListener("click", () => {
 searchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") searchGameName();
 });
-
-/************************************************************************************
- * Big Customization 4: Funding Display, Donation Form, and Display after Donation
- */
