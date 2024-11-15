@@ -10,18 +10,18 @@ Time spent: **10** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] The introduction section explains the background of the company and how many games remain unfunded.
-- [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-- [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding.
-- [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+- [X] The introduction section explains the background of the company and how many games remain unfunded.
+- [X] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+- [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding.
+- [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-- [ ] Users can now navigate to the Our Games section quickly by clicking the "Our Games" button on the navigation bar.
-- [ ] A search bar is implemented so that the user can look up the games they care about. The result shows all of the games that include at least one word from the search input.
-- [ ] Filter buttons now stay on the page even when the user has scrolled down past its original position. This helps the user avoid having to scroll back all the way to find the filter buttons.
-- [ ] A styling change is included to indicate which filter is in effect.
-- [ ] For aesthetics, buttons take 0.15s to transition when hovered on, and some minor CSS changes are made.
+- [X] Users can now navigate to the Our Games section quickly by clicking the "Our Games" button on the navigation bar.
+- [X] A search bar is implemented so that the user can look up the games they care about. The result shows all of the games that include at least one word from the search input.
+- [X] Filter buttons now stay on the page even when the user has scrolled down past its original position. This helps the user avoid having to scroll back all the way to find the filter buttons.
+- [X] A styling change is included to indicate which filter is in effect.
+- [X] For aesthetics, buttons take 0.15s to transition when hovered on, and some minor CSS changes are made.
 
 ## Video Walkthrough
 
